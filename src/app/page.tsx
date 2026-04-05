@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
+import { OpportunityFinder } from "@/components/sections/OpportunityFinder";
 import { KeyMetrics } from "@/components/sections/KeyMetrics";
 import { Opportunities } from "@/components/sections/Opportunities";
 import { Ecosystem } from "@/components/sections/Ecosystem";
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <main className="flex-1 w-full mx-auto selection:bg-blue-500/30">
         <Hero />
+        <OpportunityFinder />
         <KeyMetrics />
         <Opportunities />
         <Ecosystem />

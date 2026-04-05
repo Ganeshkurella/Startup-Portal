@@ -8,19 +8,19 @@ export const hyderabadData = {
   metrics: [
     { label: "Metro Population (2026)", value: "~11.6M", trend: "2.39% YoY Growth" },
     { label: "Total IT Jobs", value: "9.33L+", trend: "Pacing to hit 10L by 2026" },
-    { label: "Total Startup Funding", value: "$5.8B+", trend: "Leading deeptech & AI" },
+    { label: "Total Startup Funding", value: "₹48,000Cr+", trend: "Leading deeptech & AI" },
     { label: "Avg IT Salary", value: "₹1,04,371/mo", trend: "12.5% higher net vs BLR" },
     { label: "1BHK Rent (IT Corridor)", value: "₹18-32k", trend: "32.1% lower vs BLR" },
     { label: "Prop Price-to-Income", value: "4.19", trend: "Highly affordable" }
   ],
   startups: [
-    { name: "Darwinbox", sector: "SaaS", valuation: "$1B+ (Unicorn)", funding: "$307M+", keyDetail: "Agentic AI platform processing 500M+ data points." },
-    { name: "Zenoti", sector: "SaaS", valuation: "$1.5B+ (Unicorn)", funding: "$250M+", keyDetail: "Tiger Global backed, dominant in US market." },
-    { name: "HighRadius", sector: "FinTech", valuation: "$1B+ (Unicorn)", funding: "$475M+", keyDetail: "AI-driven autonomous finance software." },
-    { name: "Skyroot Aerospace", sector: "DeepTech", valuation: "~$489M (Soonicorn)", funding: "$95M+", keyDetail: "Launched India's first private rocket; backed by BlackRock." },
-    { name: "BrightChamps", sector: "EdTech", valuation: "~$650M (Soonicorn)", funding: "$63M", keyDetail: "Next-gen life skills global edtech platform." },
-    { name: "NephroPlus", sector: "HealthTech", valuation: "~$250M", funding: "$199M", keyDetail: "Largest dialysis provider network." },
-    { name: "Recykal", sector: "DeepTech", valuation: "Minicorn", funding: "$22M", keyDetail: "Digital recycling platforms. LinkedIn Top Startup." }
+    { name: "Darwinbox", sector: "SaaS", valuation: "₹8,300Cr+ (Unicorn)", funding: "₹2,548Cr+", keyDetail: "Agentic AI platform processing 500M+ data points." },
+    { name: "Zenoti", sector: "SaaS", valuation: "₹12,450Cr+ (Unicorn)", funding: "₹2,075Cr+", keyDetail: "Tiger Global backed, dominant in US market." },
+    { name: "HighRadius", sector: "FinTech", valuation: "₹8,300Cr+ (Unicorn)", funding: "₹3,942Cr+", keyDetail: "AI-driven autonomous finance software." },
+    { name: "Skyroot Aerospace", sector: "DeepTech", valuation: "~₹4,058Cr (Soonicorn)", funding: "₹788Cr+", keyDetail: "Launched India's first private rocket; backed by BlackRock." },
+    { name: "BrightChamps", sector: "EdTech", valuation: "~₹5,395Cr (Soonicorn)", funding: "₹522Cr", keyDetail: "Next-gen life skills global edtech platform." },
+    { name: "NephroPlus", sector: "HealthTech", valuation: "~₹2,075Cr", funding: "₹1,651Cr", keyDetail: "Largest dialysis provider network." },
+    { name: "Recykal", sector: "DeepTech", valuation: "Minicorn", funding: "₹182Cr", keyDetail: "Digital recycling platforms. LinkedIn Top Startup." }
   ],
   opportunities: [
     { role: "AI & GenAI Engineers", demand: "High", insight: "T-AIM Grand Challenges pushing healthcare & education GenAI." },

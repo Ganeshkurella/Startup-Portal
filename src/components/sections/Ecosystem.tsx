@@ -7,13 +7,13 @@ import { Search, BarChart3, ListFilter } from "lucide-react";
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 const fundingGrowthData = [
-  { year: '2020', funding: 100 },
-  { year: '2021', funding: 350 },
-  { year: '2022', funding: 800 },
-  { year: '2023', funding: 1200 },
-  { year: '2024', funding: 2500 },
-  { year: '2025', funding: 4000 },
-  { year: '2026', funding: 5800 },
+  { year: '2020', funding: 830 },
+  { year: '2021', funding: 2905 },
+  { year: '2022', funding: 6640 },
+  { year: '2023', funding: 9960 },
+  { year: '2024', funding: 20750 },
+  { year: '2025', funding: 33200 },
+  { year: '2026', funding: 48140 },
 ];
 
 export function Ecosystem() {
@@ -176,7 +176,7 @@ export function Ecosystem() {
                 className="glass-card bg-white p-8 rounded-3xl border border-gray-100 shadow-sm"
               >
                 <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900">Cumulative Startup Funding ($M)</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Cumulative Startup Funding (₹ Cr)</h3>
                   <p className="text-gray-500 text-sm font-medium">Trajectory from 2020 to 2026</p>
                 </div>
                 <div className="h-[400px] w-full">
@@ -189,7 +189,7 @@ export function Ecosystem() {
                         </linearGradient>
                       </defs>
                       <XAxis dataKey="year" stroke="#9ca3af" fontSize={12} tickLine={false} axisLine={false} />
-                      <YAxis stroke="#9ca3af" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => `$${value}`} />
+                      <YAxis stroke="#9ca3af" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => `₹${value}`} />
                       <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f3f4f6" />
                       <Tooltip 
                         contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}
