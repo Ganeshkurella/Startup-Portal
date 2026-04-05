@@ -20,7 +20,7 @@ export function KeyMetrics() {
       statLabel: "Engineers by '26"
     },
     {
-      icon: <Wallet className="h-6 w-6 text-orange-500" />,
+      icon: <Wallet className="h-6 w-6 text-teal-500" />,
       title: "Pure Cost Advantage",
       insight: "Premium commercial and 1BHK rents (₹18-32k) remain roughly 30% lower than Bangalore, extending early-stage runway significantly.",
       stat: "30%",
@@ -59,7 +59,8 @@ export function KeyMetrics() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="glass-card rounded-3xl p-8 hover:shadow-xl hover:border-indigo-100 transition-all group"
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="glass-card rounded-3xl p-8 hover:shadow-[0_8px_30px_rgb(79,70,229,0.12)] hover:border-indigo-300 transition-all group cursor-pointer"
             >
               <div className="flex justify-between items-start mb-6">
                 <div className="p-4 bg-white rounded-2xl shadow-sm border border-gray-100 group-hover:scale-110 transition-transform">
