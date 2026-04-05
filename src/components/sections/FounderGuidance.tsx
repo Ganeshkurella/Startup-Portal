@@ -11,6 +11,7 @@ import {
   HeartPulse, 
   Wallet, 
   Cpu, 
+  ChevronRight,
   MapPin, 
   AlertTriangle,
   ArrowLeft
