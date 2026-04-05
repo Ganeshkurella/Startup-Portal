@@ -6,7 +6,7 @@ import { Opportunities } from "@/components/sections/Opportunities";
 import { Ecosystem } from "@/components/sections/Ecosystem";
 import { AIDeepTech } from "@/components/sections/AIDeepTech";
 import { LivingInHyd } from "@/components/sections/LivingInHyd";
-import { FounderResources } from "@/components/sections/FounderResources";
+import { FounderActionGuide } from "@/components/sections/FounderActionGuide";
 import { AIAssistant } from "@/components/ui/AIAssistant";
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
         <Ecosystem />
         <AIDeepTech />
         <LivingInHyd />
-        <FounderResources />
+        <FounderActionGuide />
       </main>
       <AIAssistant />
       <footer className="border-t border-border/40 bg-background py-8 text-center text-sm text-muted-foreground relative z-20">

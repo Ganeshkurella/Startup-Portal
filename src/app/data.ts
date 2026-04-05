@@ -52,5 +52,27 @@ export const hyderabadData = {
       { name: "GCC Policy 2025", impact: "Capital subsidies and single-window clearance generating 700+ GCCs." },
       { name: "AI4TG Grand Challenge", impact: "Govt-as-first-customer offering ₹15L + pilot phases to AI startups." }
     ]
-  }
+  },
+  startupSteps: [
+    { title: "Validate Idea", desc: "Test your hypothesis with local communities & T-Hub bootcamps.", action: "Join a pre-incubation program" },
+    { title: "Register Startup", desc: "Leverage TS-iPASS for single-window clearances within 15 days.", action: "Apply via TS-iPASS" },
+    { title: "Join Incubator", desc: "Securing office space and mentorship from T-Hub, CIE, or WE-Hub.", action: "Apply to Incubators" },
+    { title: "Get Funding", desc: "Pitch to Hyderabad Angels or state-backed T-Fund networks.", action: "View Funding Flows" },
+    { title: "Scale & Hire", desc: "Tap into the 9.3L+ IT workforce pool from local global capability centers.", action: "Explore IT Corridor" }
+  ],
+  extendedIncubators: [
+    { name: "T-Hub", stage: "Early to Growth", who: "Sector Agnostic", offer: "India's largest workspace, corporate networks, and global market access." },
+    { name: "CIE IIIT-H", stage: "Research to Seed", who: "DeepTech / AI", offer: "Direct pipeline to CVIT/Robotics students and deep academic mentorship." },
+    { name: "ISB DLabs", stage: "Seed to Growth", who: "FinTech / SaaS", offer: "Commercialization pipelines and heavy business school network access." }
+  ],
+  fundingFlow: [
+    { stage: "Bootstrap / Grants", players: "T-Fund, AI4TG Grants, Nidhi Prayas" },
+    { stage: "Angel / Seed", players: "Hyderabad Angels, Indian Angel Network" },
+    { stage: "Series A & VC", players: "Endiya Partners, Kalaari Capital, T-Hub Co-invest" }
+  ],
+  ecosystemNavigator: [
+    { category: "Communities", desc: "Hyderabad Open Source, GDG Hyderabad" },
+    { category: "Events", desc: "Annual TiE Global Summit, BioAsia, T-Hub Mixers" },
+    { category: "Workspaces", desc: "T-Hub Phase 2, WeWork Knowledge City, T-Works" }
+  ]
 };

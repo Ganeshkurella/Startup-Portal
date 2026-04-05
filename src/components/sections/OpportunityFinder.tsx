@@ -32,16 +32,16 @@ const insights = {
     cta: "View Tech Jobs & GCCs"
   },
   Founder: {
-    opportunities: ["DeepTech / SpaceTech", "HealthTech", "B2B SaaS"],
+    opportunities: ["B2B SaaS / DeepTech", "HealthTech AI", "SpaceTech"],
     actions: [
-      "Leverage GCC Policy & AI4TG Grants",
-      "Incubate at T-Hub (India's largest)",
-      "Tap into ₹48,000Cr+ total funding ecosystem"
+      "1. Validate idea locally via T-Hub masterclasses",
+      "2. Register via TS-iPASS for instant clearances",
+      "3. Pitch to local VC networks (Hyderabad Angels, Endiya)"
     ],
     ecosystem: ["T-Hub", "Google for Startups Hub", "ISB DLabs (FinChAIn / GenAI)"],
     location: "Kokapet / Financial District (Premium, Networking hubs)",
     highlight: "Capital subsidies + single-window clearance for new ventures under 2nd ICT Policy.",
-    cta: "Explore Founder Resources"
+    cta: "Start Your Startup Now"
   }
 };
 
