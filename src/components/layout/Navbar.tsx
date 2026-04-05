@@ -8,7 +8,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["metrics", "startups", "ai-deeptech", "opportunities", "living", "policies"];
+      const sections = ["guidance", "funding", "incubators", "workspaces", "startups", "living", "community"];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -38,12 +38,12 @@ export function Navbar() {
         
         <div className="hidden md:flex gap-6 text-sm font-semibold text-gray-500 tracking-wide">
           {[
-            { id: "#metrics", label: "Overview" },
-            { id: "#startups", label: "Startups" },
-            { id: "#ai-deeptech", label: "DeepTech" },
-            { id: "#opportunities", label: "Talent" },
+            { id: "#guidance", label: "Guidance" },
+            { id: "#funding", label: "Funding" },
+            { id: "#workspaces", label: "Workspaces" },
+            { id: "#startups", label: "Ecosystem" },
             { id: "#living", label: "Living" },
-            { id: "#policies", label: "Resources" }
+            { id: "#community", label: "Community" }
           ].map((item) => (
             <Link 
               key={item.id} 

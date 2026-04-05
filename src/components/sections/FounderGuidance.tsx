@@ -106,7 +106,7 @@ export function FounderGuidance() {
   };
 
   return (
-    <section className="py-24 relative overflow-hidden bg-background">
+    <section id="guidance" className="py-24 relative overflow-hidden bg-background">
       {/* Background ambient glow */}
       <div className="absolute top-0 right-0 w-full max-w-2xl h-[500px] bg-indigo-500/5 blur-[120px] pointer-events-none rounded-full" />
       

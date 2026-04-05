@@ -12,7 +12,7 @@ const rentData = [
 
 export function LivingInHyd() {
   return (
-    <section className="py-24 relative bg-white border-t border-gray-100">
+    <section id="living" className="py-24 relative bg-white border-t border-gray-100">
       <div className="container mx-auto px-6 max-w-6xl">
         
         <div className="max-w-3xl mb-16 mx-auto text-center">

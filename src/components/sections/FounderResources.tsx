@@ -29,7 +29,7 @@ const incubatorsData = [
 
 export function FounderResources() {
   return (
-    <section className="py-24 relative bg-gray-50 border-t border-gray-100">
+    <section id="incubators" className="py-24 relative bg-gray-50 border-t border-gray-100">
       <div className="container mx-auto px-6 max-w-6xl">
         
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -52,7 +52,8 @@ export function FounderResources() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="bg-white p-8 rounded-3xl border border-gray-100 hover:shadow-[0_8px_30px_rgb(79,70,229,0.08)] hover:border-indigo-200 transition-all flex flex-col h-full"
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-[0_8px_30px_rgb(79,70,229,0.12)] hover:border-indigo-300 transition-all flex flex-col h-full cursor-pointer"
             >
               <h4 className="text-3xl font-black text-gray-900 mb-4">{hub.name}</h4>
               

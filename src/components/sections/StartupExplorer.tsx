@@ -15,11 +15,11 @@ export function StartupExplorer() {
     : startupsDirectory.filter(s => s.sector === activeSector);
 
   return (
-    <section className="py-24 bg-gray-50 relative overflow-hidden">
+    <section id="startups" className="py-24 bg-gray-50 relative overflow-hidden">
       <div className="container px-4 mx-auto relative z-10">
         
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 border border-orange-200 text-orange-800 text-sm font-bold tracking-wide mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-100 border border-indigo-200 text-indigo-800 text-sm font-bold tracking-wide mb-6">
             <Compass size={16} /> Ecosystem Explorer
           </div>
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
@@ -43,8 +43,8 @@ export function StartupExplorer() {
               onClick={() => setActiveSector(sector)}
               className={`px-6 py-2.5 rounded-full font-bold text-sm transition-colors border shadow-sm ${
                 activeSector === sector 
-                ? "bg-orange-500 text-white border-orange-600" 
-                : "bg-white text-gray-700 border-gray-200 hover:border-orange-300"
+                ? "bg-indigo-500 text-white border-indigo-600" 
+                : "bg-white text-gray-700 border-gray-200 hover:border-indigo-300"
               }`}
             >
               {sector}
@@ -63,11 +63,11 @@ export function StartupExplorer() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white p-8 rounded-3xl border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(249,115,22,0.1)] hover:border-orange-200 transition-all group flex flex-col justify-between"
+                className="bg-white p-8 rounded-3xl border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(249,115,22,0.1)] hover:border-indigo-200 transition-all group flex flex-col justify-between"
               >
                 <div>
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors">
+                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">
                       {startup.name}
                     </h3>
                     <span className={`text-xs font-bold px-3 py-1 rounded-full border ${
