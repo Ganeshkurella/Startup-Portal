@@ -11,7 +11,6 @@ import {
   HeartPulse, 
   Wallet, 
   Cpu, 
-  ChevronRight, 
   MapPin, 
   AlertTriangle,
   ArrowLeft
@@ -243,97 +242,85 @@ export function FounderGuidance() {
                 </button>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+              <div className="space-y-8">
                 
-                {/* Left Column (Core Actions) */}
-                <div className="md:col-span-7 space-y-8">
-                  {/* Section A: Next 3 Steps */}
-                  <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm relative overflow-hidden group hover:shadow-[0_4px_20px_rgb(0,0,0,0.03)] transition-shadow">
-                    <div className="absolute top-0 left-0 w-1.5 h-full bg-indigo-500" />
-                    <h4 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                      <span className="w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center text-sm">1</span>
-                      Your Next 3 Steps
-                    </h4>
-                    <div className="space-y-5">
-                      {guidanceData[stage].steps.map((stop, i) => (
-                        <div key={i} className="flex gap-4 items-start">
-                          <div className="w-6 h-6 rounded-full bg-indigo-50 border border-indigo-100 flex items-center justify-center flex-shrink-0 text-indigo-600 font-bold text-xs mt-0.5">
-                            {i+1}
-                          </div>
-                          <p className="text-gray-800 font-medium leading-relaxed">{stop}</p>
+                {/* Top Section (Core Actions - Full Width 3 Cols) */}
+                <div className="bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-sm relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-1.5 h-full bg-indigo-500" />
+                  <h4 className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
+                    <span className="w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center text-lg shadow-sm">1</span>
+                    Your Exact Next 3 Steps
+                  </h4>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {guidanceData[stage].steps.map((stop, i) => (
+                      <div key={i} className="bg-indigo-50/50 p-6 rounded-2xl border border-indigo-100/50 relative">
+                        <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-indigo-500 border-4 border-white flex items-center justify-center text-white font-bold text-sm shadow-sm">
+                          {i+1}
                         </div>
-                      ))}
-                    </div>
+                        <p className="text-gray-800 font-medium leading-relaxed mt-2">{stop}</p>
+                      </div>
+                    ))}
                   </div>
+                </div>
 
+                {/* 2x2 Grid Section (Details & Insights) */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {/* Section B: Where to Go */}
-                  <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm relative overflow-hidden group hover:shadow-[0_4px_20px_rgb(0,0,0,0.03)] transition-shadow">
+                  <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm relative overflow-hidden hover:border-teal-200 transition-colors">
                     <div className="absolute top-0 left-0 w-1.5 h-full bg-teal-500" />
                     <h4 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                      <MapPin className="text-teal-500" /> Where to Go in Hyderabad
+                      <MapPin className="text-teal-500" /> Target Locations
                     </h4>
-                    <div className="grid grid-cols-1 gap-4">
+                    <div className="space-y-4">
                       {guidanceData[stage].whereToGo.map((place, i) => (
-                        <div key={i} className="p-5 rounded-2xl bg-gray-50 border border-gray-100 hover:border-teal-200 transition-colors">
+                        <div key={i} className="p-5 rounded-2xl bg-gray-50 border border-gray-100">
                           <h5 className="font-bold text-gray-900 text-lg mb-1">{place.name}</h5>
                           <p className="text-sm text-gray-600 font-medium leading-relaxed">{place.reason}</p>
                         </div>
                       ))}
                     </div>
                   </div>
-                </div>
 
-                {/* Right Column (Insights & Warnings) */}
-                <div className="md:col-span-5 space-y-8">
                   {/* Section C: Funding Path */}
                   <div className="bg-gradient-to-br from-indigo-50 to-white p-8 rounded-3xl border border-indigo-100 shadow-sm">
-                    <h4 className="text-lg font-bold text-indigo-900 mb-3 flex items-center gap-2">
-                      <Wallet className="text-indigo-500" /> Funding Path (Right Now)
+                    <h4 className="text-xl font-bold text-indigo-900 mb-5 flex items-center gap-2">
+                      <Wallet className="text-indigo-500" /> Funding Path
                     </h4>
-                    <p className="text-indigo-800 text-sm leading-relaxed font-semibold">
-                      {guidanceData[stage].fundingPath}
-                    </p>
+                    <div className="p-5 bg-white/60 rounded-2xl border border-indigo-50">
+                      <p className="text-indigo-800 text-[15px] leading-relaxed font-semibold">
+                        {guidanceData[stage].fundingPath}
+                      </p>
+                    </div>
                   </div>
 
                   {/* Section D: Domain Specific */}
                   <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:border-gray-200 transition-colors">
-                    <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
-                      <TrendingUp className="text-emerald-500" /> {domains.find(d => d.id === domain)?.label} Opportunities
+                    <h4 className="text-xl font-bold text-gray-900 mb-5 flex items-center gap-2">
+                      <TrendingUp className="text-emerald-500" /> Local Opportunity
                     </h4>
-                    <p className="text-gray-600 text-sm leading-relaxed font-medium">
+                    <p className="text-gray-600 text-[15px] leading-relaxed font-medium p-5 bg-gray-50 rounded-2xl border border-gray-100">
                       {domainData[domain]}
                     </p>
                   </div>
 
                   {/* Section E: Reality Check */}
-                  <div className="bg-red-50 p-8 rounded-3xl border border-red-100 shadow-[0_4px_20px_rgb(239,68,68,0.05)]">
-                    <h4 className="text-lg font-bold text-red-900 mb-5 flex items-center gap-2">
-                      <AlertTriangle className="text-red-500" /> Reality Check
+                  <div className="bg-red-50 p-8 rounded-3xl border border-red-100 shadow-sm">
+                    <h4 className="text-xl font-bold text-red-900 mb-6 flex items-center gap-2">
+                      <AlertTriangle className="text-red-500" /> Reality Focus
                     </h4>
-                    <div className="space-y-3">
-                      <div className="bg-white/70 p-4 rounded-xl border border-red-100 shadow-sm">
-                        <span className="block text-[10px] uppercase tracking-wider text-red-500 font-bold mb-1">Time Expectation</span>
-                        <span className="font-extrabold text-red-950 text-sm">{guidanceData[stage].realityCheck.time}</span>
+                    <div className="space-y-4">
+                      <div className="bg-white/70 p-5 rounded-2xl border border-red-100 shadow-sm">
+                        <span className="block text-xs uppercase tracking-wider text-red-500 font-bold mb-1">Time Expectation</span>
+                        <span className="font-extrabold text-red-950 text-[15px]">{guidanceData[stage].realityCheck.time}</span>
                       </div>
-                      <div className="bg-white/70 p-4 rounded-xl border border-red-100 shadow-sm">
-                        <span className="block text-[10px] uppercase tracking-wider text-red-500 font-bold mb-1">Crucial Warning</span>
-                        <span className="font-extrabold text-red-950 text-sm">{guidanceData[stage].realityCheck.warning}</span>
+                      <div className="bg-white/70 p-5 rounded-2xl border border-red-100 shadow-sm">
+                        <span className="block text-xs uppercase tracking-wider text-red-500 font-bold mb-1">Crucial Warning</span>
+                        <span className="font-extrabold text-red-950 text-[15px]">{guidanceData[stage].realityCheck.warning}</span>
                       </div>
                     </div>
                   </div>
-                  
-                  {/* Section F: Next Action CTA */}
-                  <div className="pt-2">
-                    <motion.button 
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="w-full px-6 py-4 bg-gray-900 hover:bg-gray-800 text-white rounded-2xl font-bold transition-all flex items-center justify-center gap-2 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-indigo-500/20"
-                    >
-                      Explore Active Ecosystem <ChevronRight size={18} />
-                    </motion.button>
-                  </div>
-
                 </div>
+
               </div>
             </motion.div>
           )}

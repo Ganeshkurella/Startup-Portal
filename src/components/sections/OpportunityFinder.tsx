@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Briefcase, GraduationCap, Lightbulb, MapPin, TrendingUp, Handshake, ChevronRight } from "lucide-react";
+import { Briefcase, GraduationCap, Lightbulb, MapPin, TrendingUp, Handshake } from "lucide-react";
 
 type Role = "Student" | "Developer" | "Founder" | null;
 
@@ -182,17 +182,7 @@ export function OpportunityFinder() {
                   </div>
                 </div>
 
-                {/* CTA */}
-                <div className="mt-10 pt-8 border-t border-border/40 flex justify-end">
-                  <motion.button 
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-2 px-6 py-3 bg-foreground text-background hover:bg-foreground/90 rounded-full font-medium transition-colors shadow-md"
-                  >
-                    {insights[selectedRole].cta}
-                    <ChevronRight size={18} />
-                  </motion.button>
-                </div>
+                {/* Removed non-functional CTA */}
               </div>
             </motion.div>
           )}
