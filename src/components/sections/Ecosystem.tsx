@@ -125,35 +125,35 @@ export function Ecosystem() {
                         <motion.div
                           layout
                           key={startup.name}
-                          initial={{ opacity: 0, scale: 0.95 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          exit={{ opacity: 0, scale: 0.95 }}
-                          whileHover={{ scale: 1.03, y: -4 }}
-                          transition={{ duration: 0.3 }}
-                          className="glass-card bg-white rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-indigo-500/10 transition-all border border-gray-100 group relative cursor-pointer h-[200px]"
+                          initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, scale: 0.9 }}
+                          whileHover={{ scale: 1.04, y: -8, rotateX: 2, rotateY: -1 }}
+                          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                          className="glass-card bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgb(79,70,229,0.15)] transition-shadow border border-gray-100 group relative cursor-pointer h-[200px]"
                         >
                           {/* Animated Border Top */}
-                          <div className={`absolute top-0 left-0 w-full h-1 ${isUnicorn ? 'bg-gradient-to-r from-indigo-500 to-purple-500' : 'bg-transparent transition-colors group-hover:bg-teal-400'}`} />
+                          <div className={`absolute top-0 left-0 w-full h-1.5 ${isUnicorn ? 'bg-gradient-to-r from-indigo-500 to-purple-500' : 'bg-transparent group-hover:bg-teal-400 transition-colors duration-500'}`} />
 
                           <div className="p-6 h-full flex flex-col justify-between">
-                            <div className="flex justify-between items-start mb-2 relative z-10 transition-transform duration-500 group-hover:-translate-y-1">
+                            <div className="flex justify-between items-start mb-2 relative z-10 transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-[1.02]">
                               <div>
                                 <h3 className="text-xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">{startup.name}</h3>
                                 <span className="text-xs font-bold uppercase tracking-wider text-teal-600">{startup.sector}</span>
                               </div>
-                              <div className={`text-[10px] uppercase font-bold px-2 py-1 rounded bg-gray-50 border ${isUnicorn ? 'text-indigo-600 border-indigo-200' : 'text-gray-500 border-gray-200'}`}>
+                              <div className={`text-[10px] uppercase font-bold px-2 py-1 rounded-md shadow-sm border ${isUnicorn ? 'text-indigo-600 bg-indigo-50 border-indigo-200' : 'text-gray-600 bg-gray-50 border-gray-200 group-hover:bg-teal-50 group-hover:text-teal-700 group-hover:border-teal-200 transition-colors'}`}>
                                 {startup.valuation.split(" ")[0]} 
                               </div>
                             </div>
                             
-                            <div className="relative z-10 transition-transform duration-500 group-hover:-translate-y-1">
+                            <div className="relative z-10 transition-transform duration-500 group-hover:-translate-y-2">
                               <div className="text-[10px] uppercase font-bold text-gray-400 tracking-wider">Total Raised</div>
-                              <div className="font-bold text-gray-800 text-lg">{startup.funding}</div>
+                              <div className="font-extrabold text-gray-800 text-xl group-hover:text-indigo-900 transition-colors">{startup.funding}</div>
                             </div>
                             
                             {/* Hidden Expandable Insight */}
-                            <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-gray-50 to-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 border-t border-gray-100">
-                              <p className="text-xs font-medium text-gray-600 leading-relaxed">
+                            <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-indigo-50/90 to-white/90 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out border-t border-indigo-100/50 backdrop-blur-md">
+                              <p className="text-xs font-semibold text-gray-700 leading-relaxed m-0">
                                 {startup.keyDetail}
                               </p>
                             </div>

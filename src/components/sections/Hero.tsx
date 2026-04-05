@@ -33,15 +33,20 @@ export function Hero() {
       <div className="container relative z-10 px-6 mx-auto text-center mt-16 pb-24">
         <motion.div
           style={{ y: textY, opacity: opacityFade }}
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          initial={{ opacity: 0, y: 70 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ type: "spring", stiffness: 50, damping: 20, mass: 1 }}
           className="max-w-5xl mx-auto"
         >
-          <div className="inline-flex items-center gap-2 mb-8 px-5 py-2 rounded-full glass-card border border-indigo-200 shadow-sm text-indigo-700 text-sm font-semibold tracking-wide hover:scale-105 transition-transform cursor-default cursor-crosshair">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ type: "spring", delay: 0.2, stiffness: 100 }}
+            className="inline-flex items-center gap-2 mb-8 px-5 py-2 rounded-full glass-card border border-indigo-200 shadow-sm text-indigo-700 text-sm font-semibold tracking-wide hover:scale-105 transition-transform cursor-default cursor-crosshair"
+          >
             <span className="w-2 h-2 rounded-full bg-indigo-600 animate-pulse" />
             Live Intelligence Dash 2026
-          </div>
+          </motion.div>
           
           <h1 className="text-5xl md:text-7xl lg:text-[5rem] font-extrabold tracking-tight text-gray-900 mb-8 leading-[1.1]">
             Why Hyderabad is <br className="hidden md:block" />
@@ -58,11 +63,11 @@ export function Hero() {
             {hyderabadData.heroStats.map((stat, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 + i * 0.1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="glass-card px-8 py-6 rounded-3xl relative group overflow-hidden border border-white hover:border-indigo-300 transition-all cursor-default min-w-[200px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-indigo-500/10"
+                transition={{ type: "spring", stiffness: 50, damping: 15, delay: 0.3 + i * 0.1 }}
+                whileHover={{ scale: 1.08, y: -8, rotate: -1 }}
+                className="glass-card px-8 py-6 rounded-3xl relative group overflow-hidden border border-white hover:border-indigo-300 transition-all cursor-default min-w-[200px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-indigo-500/20"
               >
                 <div className="absolute inset-0 bg-gradient-to-b from-indigo-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2 relative z-10">
