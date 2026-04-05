@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { hyderabadData } from "@/app/data";
 
 export function Hero() {
@@ -11,10 +11,12 @@ export function Hero() {
     offset: ["start start", "end start"],
   });
 
+  const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
+
   // Parallax transforms
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  const opacityFade = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const backgroundY = useTransform(smoothProgress, [0, 1], ["0%", "50%"]);
+  const textY = useTransform(smoothProgress, [0, 1], ["0%", "100%"]);
+  const opacityFade = useTransform(smoothProgress, [0, 0.8], [1, 0]);
 
   return (
     <section ref={ref} className="relative min-h-[95vh] flex flex-col items-center justify-center overflow-hidden bg-background">
@@ -42,7 +44,9 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ type: "spring", delay: 0.2, stiffness: 100 }}
-            className="inline-flex items-center gap-2 mb-8 px-5 py-2 rounded-full glass-card border border-indigo-200 shadow-sm text-indigo-700 text-sm font-semibold tracking-wide hover:scale-105 transition-transform cursor-default cursor-crosshair"
+            whileHover={{ y: -3, scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center gap-2 mb-8 px-5 py-2 rounded-full glass-card border border-indigo-200 shadow-sm text-indigo-700 text-sm font-semibold tracking-wide cursor-default cursor-crosshair"
           >
             <span className="w-2 h-2 rounded-full bg-indigo-600 animate-pulse" />
             Live Intelligence Dash 2026
@@ -66,8 +70,9 @@ export function Hero() {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ type: "spring", stiffness: 50, damping: 15, delay: 0.3 + i * 0.1 }}
-                whileHover={{ scale: 1.08, y: -8, rotate: -1 }}
-                className="glass-card px-8 py-6 rounded-3xl relative group overflow-hidden border border-white hover:border-indigo-300 transition-all cursor-default min-w-[200px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-indigo-500/20"
+                whileHover={{ scale: 1.06, y: -12, rotate: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="glass-card px-8 py-6 rounded-3xl relative group overflow-hidden border border-white hover:border-indigo-300 transition-colors cursor-default min-w-[200px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-indigo-500/20"
               >
                 <div className="absolute inset-0 bg-gradient-to-b from-indigo-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2 relative z-10">

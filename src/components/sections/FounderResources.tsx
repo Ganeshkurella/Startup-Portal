@@ -23,24 +23,28 @@ export function FounderResources() {
 
         {/* Tab Switcher */}
         <div className="flex gap-2 mb-10 p-1.5 bg-gray-100 rounded-xl w-max">
-          <button
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             onClick={() => setActiveTab("incubators")}
-            className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center gap-2 ${
+            className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-colors flex items-center gap-2 ${
               activeTab === "incubators" ? "bg-white text-indigo-700 shadow-sm" : "text-gray-500 hover:text-gray-900"
             }`}
           >
             <Building2 className="w-4 h-4" />
-            Mega Incubators
-          </button>
-          <button
+            Incubators
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             onClick={() => setActiveTab("policies")}
-            className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center gap-2 ${
-              activeTab === "policies" ? "bg-white text-teal-700 shadow-sm" : "text-gray-500 hover:text-gray-900"
+            className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-colors flex items-center gap-2 ${
+              activeTab === "policies" ? "bg-white text-indigo-700 shadow-sm" : "text-gray-500 hover:text-gray-900"
             }`}
           >
             <ShieldCheck className="w-4 h-4" />
-            Growth Policies
-          </button>
+            State Policies
+          </motion.button>
         </div>
 
         {/* Dynamic Content */}

@@ -92,8 +92,10 @@ export function OpportunityFinder() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 onClick={() => setSelectedRole(role.id as Role)}
-                className={`p-6 rounded-3xl border transition-all duration-300 text-left flex flex-col items-start gap-4 ${
+                className={`p-6 rounded-3xl border transition-colors duration-300 text-left flex flex-col items-start gap-4 ${
                   isSelected 
                     ? "bg-blue-500/10 border-blue-500/50 shadow-[0_0_30px_rgba(59,130,246,0.15)] scale-[1.02]" 
                     : "bg-muted/30 border-border/50 hover:bg-muted/50 hover:border-slate-500/30 hover:scale-[1.01]"
@@ -182,10 +184,14 @@ export function OpportunityFinder() {
 
                 {/* CTA */}
                 <div className="mt-10 pt-8 border-t border-border/40 flex justify-end">
-                  <button className="flex items-center gap-2 px-6 py-3 bg-foreground text-background hover:bg-foreground/90 rounded-full font-medium transition-colors shadow-md">
+                  <motion.button 
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center gap-2 px-6 py-3 bg-foreground text-background hover:bg-foreground/90 rounded-full font-medium transition-colors shadow-md"
+                  >
                     {insights[selectedRole].cta}
                     <ChevronRight size={18} />
-                  </button>
+                  </motion.button>
                 </div>
               </div>
             </motion.div>

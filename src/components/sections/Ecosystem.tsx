@@ -46,24 +46,28 @@ export function Ecosystem() {
         {/* Unified Search & Control Bar */}
         <div className="glass-card rounded-2xl p-4 mb-10 border border-gray-100 flex flex-col md:flex-row gap-4 justify-between items-center z-20 relative shadow-sm">
           <div className="flex w-full md:w-auto bg-gray-100/50 rounded-xl border border-gray-200 p-1">
-            <button
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => setActiveTab("database")}
-              className={`flex-1 md:flex-none px-6 py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2 transition-all ${
+              className={`flex-1 md:flex-none px-6 py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2 transition-colors ${
                 activeTab === "database" ? "bg-white text-indigo-700 shadow-sm" : "text-gray-500 hover:text-gray-900"
               }`}
             >
               <ListFilter className="w-4 h-4" />
               Database
-            </button>
-            <button
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => setActiveTab("analytics")}
-              className={`flex-1 md:flex-none px-6 py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2 transition-all ${
+              className={`flex-1 md:flex-none px-6 py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2 transition-colors ${
                 activeTab === "analytics" ? "bg-white text-indigo-700 shadow-sm" : "text-gray-500 hover:text-gray-900"
               }`}
             >
               <BarChart3 className="w-4 h-4" />
               Analytics
-            </button>
+            </motion.button>
           </div>
 
           {activeTab === "database" && (
@@ -94,24 +98,28 @@ export function Ecosystem() {
               >
                 {/* Filters */}
                 <div className="flex flex-wrap gap-2 mb-8">
-                  <button
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     onClick={() => setActiveSector(null)}
-                    className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all border ${
+                    className={`px-4 py-1.5 rounded-full text-xs font-bold transition-colors border ${
                       activeSector === null ? "bg-indigo-50 border-indigo-200 text-indigo-700" : "bg-white border-gray-200 text-gray-500 hover:border-gray-300"
                     }`}
                   >
                     All
-                  </button>
+                  </motion.button>
                   {allSectors.map((sector) => (
-                    <button
+                    <motion.button
                       key={sector}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
                       onClick={() => setActiveSector(sector)}
-                      className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all border ${
+                      className={`px-4 py-1.5 rounded-full text-xs font-bold transition-colors border ${
                         activeSector === sector ? "bg-indigo-50 border-indigo-200 text-indigo-700" : "bg-white border-gray-200 text-gray-500 hover:border-gray-300"
                       }`}
                     >
                       {sector}
-                    </button>
+                    </motion.button>
                   ))}
                 </div>
 
