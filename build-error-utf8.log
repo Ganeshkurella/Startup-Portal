@@ -1,0 +1,68 @@
+﻿Ôû▓ Next.js 16.2.2 (Turbopack)
+
+  Creating an optimized production build ...
+Ô£ô Compiled successfully in 17.9s
+  Running TypeScript ...
+node.exe : Failed to type check.
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~
+    + CategoryInfo              : 
+NotSpecified: (Fai    led to type 
+check.:Str    ing) [], 
+RemoteExcepti    on
+    + FullyQualifiedErrorI    d : 
+NativeCommandError
+ 
+
+./src/components/sections/Policies
+.tsx:29:30
+Type error: Property 'policies' 
+does not exist on type '{ 
+heroStats: { label: string; 
+value: string; suffix: string; 
+}[]; metrics: { label: string; 
+value: string; trend: string; 
+}[]; startups: { name: string; 
+sector: string; valuation: 
+string; funding: string; 
+keyDetail: string; }[]; 
+opportunities: { ...; }[]; 
+ai_ecosystem: { ...; }[]; 
+living_data: { ...; }[]; 
+resources:...'.
+
+  [90m27 |[0m           <div 
+className=[32m"max-w-4xl mx-auto 
+rounded-xl border border-white/10 
+bg-card/50 p...[0m
+  [90m28 |[0m             
+<[33mAccordion[0m 
+[36mtype[0m=[32m"single"[0m 
+collapsible 
+className=[32m"w-full"[0m>
+[31m[1m>[0m [90m29 |[0m      
+         {hyderabadData.policies.m
+ap((policy: any, i: number) => (
+  [90m   |[0m                   
+           [31m[1m^[0m
+  [90m30 |[0m                 
+<[33mAccordionItem[0m key={i} va
+lue={[32m`item-[0m${i[32m}`[0m
+} className=[32m"border-white/10"
+[0m>
+  [90m31 |[0m                   
+<[33mAccordionTrigger[0m 
+className=[32m"text-lg 
+font-semibold hover:text-blue-400 
+t...[0m
+  [90m32 |[0m                   
+  <div className=[32m"flex 
+items-center gap-3"[0m>
+Next.js build worker exited with 
+code: 1 and signal: null
