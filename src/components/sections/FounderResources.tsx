@@ -1,101 +1,95 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { hyderabadData } from "@/app/data";
-import { Building2, ShieldCheck } from "lucide-react";
+import { motion } from "framer-motion";
+import { ShieldCheck, MapPin, Target, Sparkles, BrainCircuit } from "lucide-react";
+
+const incubatorsData = [
+  { 
+    name: "T-Hub", 
+    location: "Raidurg (Inorbit Mall Road)", 
+    stage: "Idea through Series B", 
+    perks: ["Access to T-Fund", "Free global SaaS credits (AWS/Azure)", "Direct corporate innovation wings"], 
+    why: "India's largest incubation facility. Essential if you want to network aggressively, find co-founders, and hit the mainstream local radar immediately." 
+  },
+  { 
+    name: "CIE IIIT-H", 
+    location: "Gachibowli (Inside IIIT Campus)", 
+    stage: "DeepTech / AI / Academic spinoffs", 
+    perks: ["CVIT & Robotics lab access", "Direct elite talent pipeline", "Seed grants via DST (₹10-25L)"], 
+    why: "Perfect if you are building hardcore IP, robotics, or computer vision requiring academic backing and deep academic validation." 
+  },
+  { 
+    name: "ISB DLabs", 
+    location: "Gachibowli (Inside ISB Campus)", 
+    stage: "Pre-Seed / Seed", 
+    perks: ["Elite ISB alumni network", "FinChAIn focus initiatives", "Business & GTM mentorship"], 
+    why: "Choose this if your core tech is already built, and your primary roadblock is hardcore GTM strategy, pricing, or business model validation." 
+  }
+];
 
 export function FounderResources() {
-  const [activeTab, setActiveTab] = useState<"incubators" | "policies">("incubators");
-
   return (
-    <section id="policies" className="py-24 relative bg-white border-t border-gray-100">
+    <section className="py-24 relative bg-gray-50 border-t border-gray-100">
       <div className="container mx-auto px-6 max-w-6xl">
-        <div className="mb-12">
-          <h2 className="text-4xl font-extrabold text-gray-900 mb-6">Zero-to-One Accelerants</h2>
-          
-          <div className="insight-box border-l-teal-500 bg-gray-50">
-            <p className="text-gray-700 text-lg font-medium m-0">
-              The government isn't just passing bills—it's actively acting as the <strong className="text-teal-700">"first customer"</strong> for DeepTech, subsidizing compute, and housing literally thousands of startups under the T-Hub umbrella.
-            </p>
+        
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-100 border border-indigo-200 text-indigo-800 text-sm font-bold tracking-wide mb-6">
+            <BrainCircuit size={16} /> Section 3: Incubators & Support
           </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
+            Institutional Accelerants.
+          </h2>
+          <p className="text-xl text-gray-600 font-medium leading-relaxed">
+            Hyderabad is unique because the government acts as a massive institutional backer. Here are the precise launchpads you should target based on your product.
+          </p>
         </div>
 
-        {/* Tab Switcher */}
-        <div className="flex gap-2 mb-10 p-1.5 bg-gray-100 rounded-xl w-max">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setActiveTab("incubators")}
-            className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-colors flex items-center gap-2 ${
-              activeTab === "incubators" ? "bg-white text-indigo-700 shadow-sm" : "text-gray-500 hover:text-gray-900"
-            }`}
-          >
-            <Building2 className="w-4 h-4" />
-            Incubators
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setActiveTab("policies")}
-            className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-colors flex items-center gap-2 ${
-              activeTab === "policies" ? "bg-white text-indigo-700 shadow-sm" : "text-gray-500 hover:text-gray-900"
-            }`}
-          >
-            <ShieldCheck className="w-4 h-4" />
-            State Policies
-          </motion.button>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {incubatorsData.map((hub, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
+              className="bg-white p-8 rounded-3xl border border-gray-100 hover:shadow-[0_8px_30px_rgb(79,70,229,0.08)] hover:border-indigo-200 transition-all flex flex-col h-full"
+            >
+              <h4 className="text-3xl font-black text-gray-900 mb-4">{hub.name}</h4>
+              
+              <div className="flex flex-col gap-3 mb-6 flex-grow">
+                <div className="flex items-center gap-2 text-sm font-bold text-gray-600 bg-gray-50 px-3 py-2 rounded-lg border border-gray-100">
+                  <MapPin size={16} className="text-indigo-500" /> {hub.location}
+                </div>
+                <div className="flex items-center gap-2 text-sm font-bold text-gray-600 bg-gray-50 px-3 py-2 rounded-lg border border-gray-100">
+                  <Target size={16} className="text-teal-500" /> {hub.stage}
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <h5 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-3">Core Perks</h5>
+                <ul className="space-y-2">
+                  {hub.perks.map((perk, j) => (
+                    <li key={j} className="flex items-start gap-2 text-sm font-medium text-gray-600">
+                      <ShieldCheck size={16} className="text-teal-500 mt-0.5 shrink-0" />
+                      {perk}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-indigo-50 p-5 rounded-2xl border border-indigo-100/50 mt-auto">
+                <h5 className="text-xs font-bold text-indigo-800 uppercase tracking-widest mb-2 flex items-center gap-1">
+                  <Sparkles size={14} /> Why Choose Them
+                </h5>
+                <p className="text-indigo-900 font-medium text-sm leading-relaxed">
+                  {hub.why}
+                </p>
+              </div>
+
+            </motion.div>
+          ))}
         </div>
 
-        {/* Dynamic Content */}
-        <div className="min-h-[400px]">
-          <AnimatePresence mode="wait">
-            {activeTab === "incubators" && (
-              <motion.div
-                key="incubators"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                transition={{ duration: 0.3 }}
-                className="grid grid-cols-1 md:grid-cols-2 gap-6"
-              >
-                {hyderabadData.resources.incubators.map((hub, i) => (
-                  <div key={i} className="glass-card bg-white p-8 rounded-3xl border border-gray-100 hover:shadow-lg transition-all group">
-                    <div className="flex justify-between items-center mb-4">
-                      <h4 className="text-2xl font-bold text-gray-900">{hub.name}</h4>
-                      <span className="bg-indigo-50 text-indigo-700 font-bold text-xs uppercase tracking-wider py-1 px-3 rounded-full">
-                        {hub.scale}
-                      </span>
-                    </div>
-                    <div className="text-sm text-teal-600 font-bold mb-3">{hub.focus} Focus</div>
-                    <p className="text-gray-600 leading-relaxed font-medium">{hub.details}</p>
-                  </div>
-                ))}
-              </motion.div>
-            )}
-
-            {activeTab === "policies" && (
-              <motion.div
-                key="policies"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                transition={{ duration: 0.3 }}
-                className="grid grid-cols-1 md:grid-cols-3 gap-6"
-              >
-                {hyderabadData.resources.policies.map((policy, i) => (
-                  <div key={i} className="glass-card bg-white p-8 rounded-3xl border border-gray-100 hover:shadow-lg transition-all">
-                    <div className="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-6">
-                      <ShieldCheck className="text-teal-500 h-6 w-6" />
-                    </div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-4">{policy.name}</h4>
-                    <p className="text-gray-600 leading-relaxed font-medium">{policy.impact}</p>
-                  </div>
-                ))}
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
       </div>
     </section>
   );

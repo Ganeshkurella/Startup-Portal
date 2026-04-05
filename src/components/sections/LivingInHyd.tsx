@@ -1,55 +1,81 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { hyderabadData } from "@/app/data";
-import { CheckCircle2 } from "lucide-react";
+import { Home, Wallet, CheckCircle2, TrendingDown } from "lucide-react";
+
+const rentData = [
+  { area: "Madhapur / Kondapur", type: "1 BHK", rent: "₹20,000 - ₹28,000", verdict: "The Sweet Spot. High startup density, literal walking distance to major tech parks." },
+  { area: "Gachibowli / Nanakramguda", type: "2 BHK", rent: "₹30,000 - ₹45,000", verdict: "Space & Quiet. Better for founders with families or hardware deeptech engineering setups." },
+  { area: "Jubilee Hills", type: "1 BHK Studio", rent: "₹35,000 - ₹50,000+", verdict: "Premium lifestyle. Stay here if you host VCs constantly or operate in consumer luxury." },
+  { area: "Kukatpally / Miyapur", type: "2 BHK", rent: "₹16,000 - ₹25,000", verdict: "Strict bootstrapper budget. Direct Red Line metro access drops you straight into Hitech City." }
+];
 
 export function LivingInHyd() {
   return (
-    <section id="living" className="py-24 relative bg-gray-50 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
+    <section className="py-24 relative bg-white border-t border-gray-100">
       <div className="container mx-auto px-6 max-w-6xl">
-        <div className="mb-12">
-          <h2 className="text-4xl font-extrabold text-gray-900 mb-6">Lifestyle Mathematics</h2>
-          
-          <div className="insight-box border-l-indigo-500 bg-white shadow-sm">
-            <p className="text-gray-700 text-lg font-medium m-0">
-              The ultimate retention tool for founders isn't just equity—it's the city itself. Hyderabad allows engineers to command top-tier salaries while dropping their <strong className="text-indigo-600">monthly burn rate by 30%</strong> compared to traditional ecosystems.
-            </p>
+        
+        <div className="max-w-3xl mb-16 mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-50 border border-teal-200 text-teal-700 text-sm font-bold tracking-wide mb-6 shadow-sm">
+            <Home size={16} /> Section 6: Living & Cost Guide
+          </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
+            Burn Rate Dynamics.
+          </h2>
+          <p className="text-xl text-gray-600 font-medium leading-relaxed">
+            The ultimate competitive advantage of building in Hyderabad isn't just the IT policy—it's the mathematically superior cost of living. Extend your runway effortlessly.
+          </p>
+        </div>
+
+        {/* Highlight Stats */}
+        <div className="flex flex-col md:flex-row gap-6 mb-12">
+          <div className="flex-1 bg-gradient-to-br from-teal-500 to-emerald-600 p-8 rounded-3xl text-white shadow-lg flex items-center justify-between">
+            <div>
+              <p className="text-teal-100 font-bold uppercase tracking-widest text-sm mb-1">vs Bangalore</p>
+              <h3 className="text-4xl font-black">-30% Burn Rate</h3>
+            </div>
+            <TrendingDown size={48} className="text-teal-200 opacity-50" />
+          </div>
+          <div className="flex-1 bg-gray-900 p-8 rounded-3xl text-white shadow-lg">
+            <p className="text-gray-400 font-bold uppercase tracking-widest text-sm mb-1">Standard Dev Salary</p>
+            <h3 className="text-4xl font-black mb-2">₹1.04L <span className="text-xl text-gray-500 font-medium">/mo median</span></h3>
+            <p className="text-sm font-medium text-gray-400">12.5% higher net disposable income due to lower housing caps.</p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-          {hyderabadData.living_data.map((item: any, i: number) => (
+        {/* Rent Grid */}
+        <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+          <Wallet className="text-teal-600" /> Where should a founder live?
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {rentData.map((item, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group"
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: i * 0.1 }}
+              className="bg-gray-50 rounded-3xl p-6 border border-gray-200 hover:border-teal-300 hover:bg-white hover:shadow-[0_8px_30px_rgb(20,184,166,0.1)] transition-all group"
             >
-              <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight min-h-[50px] flex items-start">
-                {item.category}
-              </h3>
-              
-              <div className="flex items-baseline gap-1 mb-4 pb-4 border-b border-gray-100">
-                <span className="text-3xl font-black text-indigo-600 font-outfit">
-                  {item.cost.split(" ")[0]}
-                </span>
-                <span className="text-sm font-semibold text-gray-400">
-                  {item.cost.split(" ").slice(1).join(" ")}
+              <div className="flex justify-between items-start mb-4">
+                <h4 className="text-xl font-bold text-gray-900">{item.area}</h4>
+                <span className="bg-white border border-gray-200 text-gray-700 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                  {item.type}
                 </span>
               </div>
-              
-              <div className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-teal-500 shrink-0 mt-0.5" />
-                <p className="text-sm text-gray-600 leading-relaxed font-medium m-0">
-                  {item.insight}
+              <div className="text-3xl font-black text-teal-600 mb-4 font-outfit">
+                {item.rent}
+              </div>
+              <div className="flex items-start gap-2 bg-teal-50/50 p-4 rounded-xl border border-teal-100">
+                <CheckCircle2 className="h-5 w-5 text-teal-500 shrink-0 mt-0.5" />
+                <p className="text-sm text-gray-700 leading-relaxed font-medium m-0">
+                  {item.verdict}
                 </p>
               </div>
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );

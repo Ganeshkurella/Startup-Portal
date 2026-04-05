@@ -54,3 +54,61 @@ export const hyderabadData = {
     ]
   }
 };
+
+export const investorsList = [
+  {
+    type: "Angel Networks",
+    entities: "Hyderabad Angels, Native Angel Network",
+    stage: "Idea & Pre-Seed (₹50L - ₹2Cr)",
+    focus: "Early validation. Focus heavily on founders' background and local market traction.",
+    advice: "Do not pitch aggressive valuations. Pitch execution capability and fast iterations."
+  },
+  {
+    type: "Government Grants",
+    entities: "T-Fund, AI4TG Grand Challenge",
+    stage: "Prototyping (₹15L - ₹50L)",
+    focus: "No-equity grants for building the first prototype. Highly preferential to DeepTech & AI.",
+    advice: "Apply exclusively through T-Hub or STARTUP TS portals. Expect high competition."
+  },
+  {
+    type: "Venture Capital (Early Stage)",
+    entities: "Endiya Partners, Kalaari Capital, Anthill Ventures",
+    stage: "Seed to Series A (₹5Cr - ₹30Cr)",
+    focus: "Strict Product-Market Fit (PMF) and predictable scaling metrics.",
+    advice: "Must have MRR (Monthly Recurring Revenue) or very solid DAU profiles."
+  }
+];
+
+export const workspacesData = {
+  coworking: [
+    { name: "T-Hub Phase 2", location: "Raidurg", cost: "Subsidized (~₹6-8k/seat)", detail: "Best for aggressive networking. Strict intake process for registered startups." },
+    { name: "WeWork", location: "Krishe Emerald, Hitech City", cost: "₹12k - 18k/seat", detail: "Premium global network. Excellent aesthetic for B2B client meetings." },
+    { name: "Awfis", location: "Gachibowli & Madhapur", cost: "₹8k - 12k/seat", detail: "Flexible options and extensive local footprint for scaling teams." }
+  ],
+  cafes: [
+    { name: "Third Wave Coffee", location: "Jubilee Hills / Madhapur", detail: "The modern tech-bro hub. Excellent WiFi and charging plugs everywhere." },
+    { name: "Roastery Coffee House", location: "Banjara Hills", detail: "Great for casual networking and potential angel pitches in a premium lush setting." },
+    { name: "True Black", location: "Jubilee Hills", detail: "Quiet, premium specialty coffee. Perfect for deep focus coding or writing." }
+  ],
+  zones: [
+    { name: "Hitech City", role: "The Legacy Hub", detail: "Dense, expensive, highly accessible. Best if selling to Enterprise/GCCs." },
+    { name: "Gachibowli", role: "The New Center", detail: "Wider tech parks (DLF, Microsoft). Better traffic management and diverse deeptech talent." },
+    { name: "Financial District", role: "Premium Scaling", detail: "Where the unicorns sit. Best for Series A+ companies needing massive dedicated campuses." }
+  ]
+};
+
+export const startupsDirectory = [
+  { name: "Darwinbox", sector: "SaaS", tag: "Unicorn", detail: "HR-tech SaaS used globally. Started in Hyd, now valued at $1B+." },
+  { name: "HighRadius", sector: "Fintech", tag: "Unicorn", detail: "Autonomous finance using AI. Direct textbook example of B2B SaaS scaling." },
+  { name: "Skyroot Aerospace", sector: "DeepTech", tag: "Soonicorn", detail: "India's first private rocket launcher. Benefiting heavily from T-Works aerospace ecosystem." },
+  { name: "Mapmygenome", sector: "Health", tag: "Growth", detail: "Key player leveraging the immense Genome Valley clinical infrastructure." },
+  { name: "Zaggle", sector: "Fintech", tag: "Public", detail: "B2B SaaS Fintech. Successfully IPO'd, validating standard Hyd SaaS execution." },
+  { name: "SubK", sector: "Fintech", tag: "Growth", detail: "Financial inclusion platform heavily impacting rural tech models via microfinance." }
+];
+
+export const communityEvents = [
+  { name: "TiE Hyderabad", frequency: "Monthly", detail: "The legacy network. Best for connecting with seasoned veterans and strict angel panels." },
+  { name: "The Product Folks", frequency: "Bi-weekly", detail: "The modern builder's club. Essential for finding elite Product Managers and Devs." },
+  { name: "eChai Ventures", frequency: "Weekly", detail: "Casual, highly accessible founder meetups at co-working spaces. High value for beginners." },
+  { name: "Hyderabad Hackers", frequency: "Ad-hoc", detail: "Hardcore code-level hackathons. The #1 place to recruit your technical co-founder." }
+];
