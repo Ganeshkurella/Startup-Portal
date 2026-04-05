@@ -11,7 +11,7 @@ export function Workspaces() {
         
         <div className="max-w-3xl mb-16 mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-sm font-bold tracking-wide mb-6 shadow-sm">
-            <Building size={16} /> Section 4: Physical Infrastructure
+            <Building size={16} /> Physical Infrastructure
           </div>
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
             Where to <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Work & Meet</span>

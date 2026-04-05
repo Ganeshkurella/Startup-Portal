@@ -11,7 +11,7 @@ export function InvestmentGuide() {
         
         <div className="max-w-3xl mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 text-sm font-bold tracking-wide mb-6">
-            <Landmark size={16} /> Section 2: Funding Ecosystem
+            <Landmark size={16} /> Funding Ecosystem
           </div>
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
             Who funds startups in Hyderabad?
@@ -74,7 +74,7 @@ export function InvestmentGuide() {
 
         <div className="mt-12 flex justify-center">
           <motion.a
-            href="https://t-hub.co/funding/"
+            href="https://t-hub.co/"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}

@@ -17,7 +17,7 @@ export function LivingInHyd() {
         
         <div className="max-w-3xl mb-16 mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-50 border border-teal-200 text-teal-700 text-sm font-bold tracking-wide mb-6 shadow-sm">
-            <Home size={16} /> Section 6: Living & Cost Guide
+            <Home size={16} /> Living & Cost Guide
           </div>
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
             Burn Rate Dynamics.

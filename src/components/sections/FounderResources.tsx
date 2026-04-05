@@ -34,7 +34,7 @@ export function FounderResources() {
         
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-100 border border-indigo-200 text-indigo-800 text-sm font-bold tracking-wide mb-6">
-            <BrainCircuit size={16} /> Section 3: Incubators & Support
+            <BrainCircuit size={16} /> Institutional Support
           </div>
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
             Institutional Accelerants.

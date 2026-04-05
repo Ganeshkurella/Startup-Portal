@@ -11,7 +11,7 @@ export function Community() {
         
         <div className="max-w-3xl mb-16 mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-50 border border-rose-200 text-rose-700 text-sm font-bold tracking-wide mb-6 shadow-sm">
-            <Users size={16} /> Section 7: Networking & Community
+            <Users size={16} /> Networking & Community
           </div>
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
             How to enter the ecosystem.

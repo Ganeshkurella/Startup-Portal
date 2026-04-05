@@ -20,7 +20,7 @@ export function StartupExplorer() {
         
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 border border-orange-200 text-orange-800 text-sm font-bold tracking-wide mb-6">
-            <Compass size={16} /> Section 5: Ecosystem Explorer
+            <Compass size={16} /> Ecosystem Explorer
           </div>
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
             Who is building what?
