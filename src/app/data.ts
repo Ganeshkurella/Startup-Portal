@@ -81,19 +81,20 @@ export const investorsList = [
 
 export const workspacesData = {
   coworking: [
-    { name: "T-Hub Phase 2", location: "Raidurg", cost: "Subsidized (~₹6-8k/seat)", detail: "Best for aggressive networking. Strict intake process for registered startups." },
-    { name: "WeWork", location: "Krishe Emerald, Hitech City", cost: "₹12k - 18k/seat", detail: "Premium global network. Excellent aesthetic for B2B client meetings." },
-    { name: "Awfis", location: "Gachibowli & Madhapur", cost: "₹8k - 12k/seat", detail: "Flexible options and extensive local footprint for scaling teams." }
+    { name: "T-Hub", location: "Gachibowli", bestFor: "Govt Connects & Networking", whyFoundersUseIt: "Unparalleled prestige, and direct access to state tech initiatives." },
+    { name: "WeWork", location: "Kondapur", bestFor: "B2B Sales & Global Clients", whyFoundersUseIt: "Premium global aesthetics and standard corporate vibe." },
+    { name: "Awfis", location: "HITEC City", bestFor: "Scaling Teams", whyFoundersUseIt: "Flexible expansion options, proximity to tech parks." },
+    { name: "iSprout", location: "Madhapur", bestFor: "Bootstrapped & Mid-Sized", whyFoundersUseIt: "Vibrant designs and a great, well-connected community." }
   ],
   cafes: [
-    { name: "Third Wave Coffee", location: "Jubilee Hills / Madhapur", detail: "The modern tech-bro hub. Excellent WiFi and charging plugs everywhere." },
-    { name: "Roastery Coffee House", location: "Banjara Hills", detail: "Great for casual networking and potential angel pitches in a premium lush setting." },
-    { name: "True Black", location: "Jubilee Hills", detail: "Quiet, premium specialty coffee. Perfect for deep focus coding or writing." }
+    { name: "Roastery Coffee House", area: "Banjara Hills", bestUse: "Casual Networking & Angel Pitches", timeSuitability: "Late Afternoons" },
+    { name: "Third Wave Coffee", area: "Jubilee Hills", bestUse: "Focus Work & Casual Meetings", timeSuitability: "Mornings & Evenings" },
+    { name: "CIE Research Cafe", area: "IIIT-H Campus", bestUse: "Deeptech & Academic Collab", timeSuitability: "All Day" }
   ],
   zones: [
-    { name: "Hitech City", role: "The Legacy Hub", detail: "Dense, expensive, highly accessible. Best if selling to Enterprise/GCCs." },
-    { name: "Gachibowli", role: "The New Center", detail: "Wider tech parks (DLF, Microsoft). Better traffic management and diverse deeptech talent." },
-    { name: "Financial District", role: "Premium Scaling", detail: "Where the unicorns sit. Best for Series A+ companies needing massive dedicated campuses." }
+    { name: "Hitech City", knownFor: "Enterprise Clients & MNC GCCs", whoShouldGoThere: "B2B SaaS and Enterprise founders." },
+    { name: "Gachibowli", knownFor: "Deeptech, Sprawling Campuses", whoShouldGoThere: "Hardware, AI, and research-heavy startups." },
+    { name: "Jubilee Hills", knownFor: "VCs, Angels & Elite Networking", whoShouldGoThere: "Founders seeking funding or HNI client acquisitions." }
   ]
 };
 
