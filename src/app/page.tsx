@@ -8,7 +8,6 @@ import { StartupExplorer } from "@/components/sections/StartupExplorer";
 import { LivingInHyd } from "@/components/sections/LivingInHyd";
 import { Community } from "@/components/sections/Community";
 import { KeyMetrics } from "@/components/sections/KeyMetrics";
-import { AIAssistant } from "@/components/ui/AIAssistant";
 
 export default function Home() {
   return (
@@ -25,7 +24,6 @@ export default function Home() {
         <Community />
         <KeyMetrics />
       </main>
-      <AIAssistant />
       <footer className="border-t border-border/40 bg-background py-8 text-center text-sm text-muted-foreground relative z-20">
         <p>Hyderabad Startup Portal 2026. A hyper-local execution guide.</p>
       </footer>
