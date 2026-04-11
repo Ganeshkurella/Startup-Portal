@@ -29,16 +29,16 @@ export function Community() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              whileHover={{ y: -5 }}
-              className="bg-white border border-gray-200 p-8 rounded-3xl hover:shadow-[0_12px_40px_rgb(225,29,72,0.08)] hover:border-indigo-300 transition-all flex gap-6 items-start group"
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="bg-white border border-gray-200 p-8 rounded-3xl hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:border-indigo-300 transition-all duration-300 flex gap-6 items-start group"
             >
-              <div className="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 border border-indigo-100 group-hover:scale-110 transition-transform">
+              <div className="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 border border-indigo-100 group-hover:bg-indigo-100 transition-colors">
                 <CalendarDays size={24} />
               </div>
               <div>
                 <div className="flex justify-between items-center mb-2 gap-4">
-                  <h3 className="text-2xl font-bold text-gray-900 whitespace-nowrap">{event.name}</h3>
-                  <span className="text-[10px] font-bold px-2 py-1 bg-gray-100 text-gray-600 rounded-md uppercase tracking-widest whitespace-nowrap">
+                  <h3 className="text-2xl font-bold text-gray-900 whitespace-nowrap group-hover:text-indigo-700 transition-colors">{event.name}</h3>
+                  <span className="text-[10px] font-bold px-2 py-1 bg-gray-100 text-gray-600 rounded-md uppercase tracking-widest whitespace-nowrap transition-colors border border-transparent group-hover:bg-indigo-50 group-hover:text-indigo-700 group-hover:border-indigo-200">
                     {event.frequency}
                   </span>
                 </div>

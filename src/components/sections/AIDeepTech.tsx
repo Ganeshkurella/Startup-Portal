@@ -25,7 +25,8 @@ export function AIDeepTech() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group glass-card rounded-3xl p-8 hover:bg-white hover:shadow-xl hover:shadow-teal-500/10 transition-all border border-gray-100"
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="group bg-white rounded-3xl p-8 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:border-teal-300 transition-all duration-300 border border-gray-200 flex-1"
             >
               <div className="flex justify-between items-center mb-6">
                 <span className="px-3 py-1 rounded-full bg-teal-50 text-teal-700 text-xs font-bold tracking-wider uppercase">

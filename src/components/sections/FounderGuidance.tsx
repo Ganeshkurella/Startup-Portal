@@ -162,16 +162,16 @@ export function FounderGuidance() {
                   return (
                     <motion.button
                       key={s.id}
-                      whileHover={{ scale: 1.03, y: -5 }}
+                      whileHover={{ scale: 1.02, y: -5 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => handleStageSelect(s.id)}
-                      className="p-8 bg-white border border-gray-200 rounded-3xl text-left shadow-sm hover:shadow-[0_8px_30px_rgb(79,70,229,0.1)] hover:border-indigo-300 transition-all flex flex-col items-start gap-4"
+                      className="p-8 bg-white border border-gray-200 rounded-3xl text-left hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:border-indigo-300 transition-all duration-300 flex flex-col items-start gap-4 group"
                     >
-                      <div className="p-3 bg-indigo-50 text-indigo-600 rounded-xl">
+                      <div className="p-3 bg-gray-50 text-gray-600 rounded-xl group-hover:bg-indigo-50 group-hover:text-indigo-600 transition-colors">
                         <Icon size={28} />
                       </div>
                       <div>
-                        <h4 className="text-xl font-bold text-gray-900">{s.label}</h4>
+                        <h4 className="text-xl font-bold text-gray-900 group-hover:text-indigo-700 transition-colors">{s.label}</h4>
                         <p className="text-sm text-gray-500 mt-1 font-medium">{s.desc}</p>
                       </div>
                     </motion.button>
@@ -203,15 +203,15 @@ export function FounderGuidance() {
                   return (
                     <motion.button
                       key={d.id}
-                      whileHover={{ scale: 1.05 }}
+                      whileHover={{ scale: 1.02, y: -5 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() => handleDomainSelect(d.id)}
-                      className="p-6 bg-white border border-gray-200 rounded-2xl text-center shadow-sm hover:shadow-[0_8px_20px_rgb(20,184,166,0.15)] hover:border-teal-300 transition-all flex flex-col items-center gap-3"
+                      className="p-6 bg-white border border-gray-200 rounded-2xl text-center hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:border-teal-300 transition-all duration-300 flex flex-col items-center gap-3 group"
                     >
-                      <div className="p-3 bg-teal-50 text-teal-600 rounded-xl">
+                      <div className="p-3 bg-gray-50 text-gray-600 rounded-xl group-hover:bg-teal-50 group-hover:text-teal-600 transition-colors">
                         <Icon size={24} />
                       </div>
-                      <h4 className="font-bold text-gray-900 text-sm whitespace-nowrap">{d.label}</h4>
+                      <h4 className="font-bold text-gray-900 text-sm whitespace-nowrap group-hover:text-teal-700 transition-colors">{d.label}</h4>
                     </motion.button>
                   );
                 })}

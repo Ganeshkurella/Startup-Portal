@@ -92,20 +92,20 @@ export function OpportunityFinder() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ y: -5, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => setSelectedRole(role.id as Role)}
-                className={`p-6 rounded-3xl border transition-colors duration-300 text-left flex flex-col items-start gap-4 ${
+                className={`p-6 rounded-3xl border transition-all duration-300 text-left flex flex-col items-start gap-4 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:border-indigo-300 group ${
                   isSelected 
-                    ? "bg-blue-500/10 border-blue-500/50 shadow-[0_0_30px_rgba(59,130,246,0.15)] scale-[1.02]" 
-                    : "bg-muted/30 border-border/50 hover:bg-muted/50 hover:border-slate-500/30 hover:scale-[1.01]"
+                    ? "bg-blue-100 border-blue-400 shadow-[0_0_30px_rgba(59,130,246,0.15)] scale-[1.02]" 
+                    : "bg-muted/30 border-border/50 hover:bg-white"
                 }`}
               >
-                <div className={`p-3 rounded-2xl ${isSelected ? 'bg-blue-500/20 text-blue-500' : 'bg-background text-foreground shadow-sm'}`}>
+                <div className={`p-3 rounded-2xl transition-colors ${isSelected ? 'bg-blue-100 text-blue-500' : 'bg-background text-foreground shadow-sm group-hover:bg-indigo-50 group-hover:text-indigo-600'}`}>
                   <Icon size={28} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-1">{role.label}</h3>
+                  <h3 className={`text-xl font-medium mb-1 transition-colors ${isSelected ? '' : 'group-hover:text-indigo-700'}`}>{role.label}</h3>
                   <p className="text-sm text-muted-foreground">{role.desc}</p>
                 </div>
               </motion.button>

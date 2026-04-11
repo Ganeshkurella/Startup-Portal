@@ -60,10 +60,10 @@ export function KeyMetrics() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-white border border-gray-100 rounded-3xl p-8 hover:shadow-[0_8px_30px_rgb(79,70,229,0.12)] hover:border-indigo-300 transition-all group cursor-pointer"
+              className="bg-white border border-gray-200 rounded-3xl p-8 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:border-indigo-300 transition-all duration-300 group cursor-pointer"
             >
               <div className="flex justify-between items-start mb-6">
-                <div className="p-4 bg-white rounded-2xl shadow-sm border border-gray-100 group-hover:scale-110 transition-transform">
+                <div className="p-4 bg-white rounded-2xl shadow-sm border border-gray-100 group-hover:bg-indigo-50 transition-colors">
                   {card.icon}
                 </div>
                 <div className="text-right">
@@ -72,7 +72,7 @@ export function KeyMetrics() {
                 </div>
               </div>
               
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">{card.title}</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-indigo-700 transition-colors">{card.title}</h3>
               <p className="text-gray-600 leading-relaxed text-base">{card.insight}</p>
             </motion.div>
           ))}

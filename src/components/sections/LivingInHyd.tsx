@@ -55,11 +55,12 @@ export function LivingInHyd() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: i * 0.1 }}
-              className="bg-gray-50 rounded-3xl p-6 border border-gray-200 hover:border-teal-300 hover:bg-white hover:shadow-[0_8px_30px_rgb(20,184,166,0.1)] transition-all group"
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="bg-white rounded-3xl p-6 border border-gray-200 hover:border-teal-300 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-300 group"
             >
               <div className="flex justify-between items-start mb-4">
-                <h4 className="text-xl font-bold text-gray-900">{item.area}</h4>
-                <span className="bg-white border border-gray-200 text-gray-700 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                <h4 className="text-xl font-bold text-gray-900 group-hover:text-teal-700 transition-colors">{item.area}</h4>
+                <span className="bg-gray-50 border border-gray-200 text-gray-700 text-xs font-bold px-3 py-1 rounded-full shadow-sm transition-colors group-hover:bg-teal-50 group-hover:text-teal-700 group-hover:border-teal-200">
                   {item.type}
                 </span>
               </div>

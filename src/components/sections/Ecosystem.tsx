@@ -136,9 +136,9 @@ export function Ecosystem() {
                           initial={{ opacity: 0, y: 30, scale: 0.95 }}
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, scale: 0.9 }}
-                          whileHover={{ scale: 1.04, y: -8, rotateX: 2, rotateY: -1 }}
-                          transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                          className="glass-card bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgb(79,70,229,0.15)] transition-shadow border border-gray-100 group relative cursor-pointer h-[200px]"
+                          whileHover={{ y: -5, scale: 1.02 }}
+                          transition={{ duration: 0.3 }}
+                          className="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:border-indigo-300 transition-all duration-300 group relative cursor-pointer h-[200px]"
                         >
                           {/* Animated Border Top */}
                           <div className={`absolute top-0 left-0 w-full h-1.5 ${isUnicorn ? 'bg-gradient-to-r from-indigo-500 to-purple-500' : 'bg-transparent group-hover:bg-teal-400 transition-colors duration-500'}`} />

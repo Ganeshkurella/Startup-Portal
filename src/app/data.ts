@@ -23,10 +23,10 @@ export const hyderabadData = {
     { name: "Recykal", sector: "DeepTech", valuation: "Minicorn", funding: "₹182Cr", keyDetail: "Digital recycling platforms. LinkedIn Top Startup." }
   ],
   opportunities: [
-    { role: "AI & GenAI Engineers", demand: "High", insight: "T-AIM Grand Challenges pushing healthcare & education GenAI." },
-    { role: "Hardware / Drone Tech", demand: "Surging", insight: "Skyroot and drone corridors creating massive hardware dev jobs." },
-    { role: "Enterprise SaaS Architecture", demand: "Very High", insight: "355+ GCCs (Microsoft, Google) expanding local engineering ownership." },
-    { role: "Pharma / Life Sciences R&D", demand: "Stable Growth", insight: "Genome Valley adding 300+ acres for global pharma hubs." }
+    { role: "AI & GenAI Engineers", demand: "High", insight: "T-AIM Grand Challenges pushing healthcare & education GenAI.", entryDifficulty: "Hard", opportunityLevel: "Extreme", hiringPotential: "Massive" },
+    { role: "Hardware / Drone Tech", demand: "Surging", insight: "Skyroot and drone corridors creating massive hardware dev jobs.", entryDifficulty: "Very Hard", opportunityLevel: "High", hiringPotential: "Steady Growth" },
+    { role: "Enterprise SaaS Architecture", demand: "Very High", insight: "355+ GCCs (Microsoft, Google) expanding local engineering ownership.", entryDifficulty: "Medium", opportunityLevel: "High", hiringPotential: "Explosive" },
+    { role: "Pharma / Life Sciences R&D", demand: "Stable Growth", insight: "Genome Valley adding 300+ acres for global pharma hubs.", entryDifficulty: "Hard", opportunityLevel: "Steady", hiringPotential: "High" }
   ],
   ai_ecosystem: [
     { year: "2024", entity: "Telangana Data Exchange (TGDeX)", role: "Public Infra", insight: "India's first state-led digital public infrastructure for AI." },
@@ -61,21 +61,30 @@ export const investorsList = [
     entities: "Hyderabad Angels, Native Angel Network",
     stage: "Idea & Pre-Seed (₹50L - ₹2Cr)",
     focus: "Early validation. Focus heavily on founders' background and local market traction.",
-    advice: "Do not pitch aggressive valuations. Pitch execution capability and fast iterations."
+    advice: "Do not pitch aggressive valuations. Pitch execution capability and fast iterations.",
+    whenToApproach: "When you have a working MVP and 100+ beta users.",
+    whatNotToDo: "Don't present highly speculative 5-year global projections.",
+    exampleMistakes: "Pitching $10M valuations pre-revenue."
   },
   {
     type: "Government Grants",
     entities: "T-Fund, AI4TG Grand Challenge",
     stage: "Prototyping (₹15L - ₹50L)",
     focus: "No-equity grants for building the first prototype. Highly preferential to DeepTech & AI.",
-    advice: "Apply exclusively through T-Hub or STARTUP TS portals. Expect high competition."
+    advice: "Apply exclusively through T-Hub or STARTUP TS portals. Expect high competition.",
+    whenToApproach: "At concept stage with a strong academic or technical founding team.",
+    whatNotToDo: "Don't miss strict portal application deadlines.",
+    exampleMistakes: "Applying with generic consumer apps (e.g., food delivery clone)."
   },
   {
     type: "Venture Capital (Early Stage)",
     entities: "Endiya Partners, Kalaari Capital, Anthill Ventures",
     stage: "Seed to Series A (₹5Cr - ₹30Cr)",
     focus: "Strict Product-Market Fit (PMF) and predictable scaling metrics.",
-    advice: "Must have MRR (Monthly Recurring Revenue) or very solid DAU profiles."
+    advice: "Must have MRR (Monthly Recurring Revenue) or very solid DAU profiles.",
+    whenToApproach: "When hitting $10k+ MRR or seeing explosive organic DAU growth.",
+    whatNotToDo: "Don't pitch without clear unit economics and CAC/LTV math.",
+    exampleMistakes: "Inability to explain why early users churn."
   }
 ];
 
@@ -99,12 +108,12 @@ export const workspacesData = {
 };
 
 export const startupsDirectory = [
-  { name: "Darwinbox", sector: "SaaS", tag: "Unicorn", detail: "HR-tech SaaS used globally. Started in Hyd, now valued at $1B+." },
-  { name: "HighRadius", sector: "Fintech", tag: "Unicorn", detail: "Autonomous finance using AI. Direct textbook example of B2B SaaS scaling." },
-  { name: "Skyroot Aerospace", sector: "DeepTech", tag: "Soonicorn", detail: "India's first private rocket launcher. Benefiting heavily from T-Works aerospace ecosystem." },
-  { name: "Mapmygenome", sector: "Health", tag: "Growth", detail: "Key player leveraging the immense Genome Valley clinical infrastructure." },
-  { name: "Zaggle", sector: "Fintech", tag: "Public", detail: "B2B SaaS Fintech. Successfully IPO'd, validating standard Hyd SaaS execution." },
-  { name: "SubK", sector: "Fintech", tag: "Growth", detail: "Financial inclusion platform heavily impacting rural tech models via microfinance." }
+  { name: "Darwinbox", sector: "SaaS", tag: "Unicorn", detail: "HR-tech SaaS used globally. Started in Hyd, now valued at $1B+.", whyItMatters: "Validates Hyd as a global B2B SaaS hub.", whoShouldCare: "Devs interested in enterprise AI products.", possibleOpportunity: "Massive scale engineering and enterprise sales." },
+  { name: "HighRadius", sector: "Fintech", tag: "Unicorn", detail: "Autonomous finance using AI. Direct textbook example of B2B SaaS scaling.", whyItMatters: "Proves enterprise Fintech operates efficiently out of Hyd.", whoShouldCare: "Data scientists and B2B finance experts.", possibleOpportunity: "AI-driven autonomous accounting tech roles." },
+  { name: "Skyroot Aerospace", sector: "DeepTech", tag: "Soonicorn", detail: "India's first private rocket launcher. Benefiting heavily from T-Works aerospace ecosystem.", whyItMatters: "Anchors the burgeoning space-tech ecosystem.", whoShouldCare: "Hardware, aerospace engineers, and deeptech investors.", possibleOpportunity: "Joining a globally competitive hardware startup pre-IPO." },
+  { name: "Mapmygenome", sector: "Health", tag: "Growth", detail: "Key player leveraging the immense Genome Valley clinical infrastructure.", whyItMatters: "Marries IT with Genome Valley’s biotech scaling.", whoShouldCare: "Bio-informaticians and healthtech product managers.", possibleOpportunity: "Pioneering Indian genomic data products." },
+  { name: "Zaggle", sector: "Fintech", tag: "Public", detail: "B2B SaaS Fintech. Successfully IPO'd, validating standard Hyd SaaS execution.", whyItMatters: "A rare successful Indian SaaS IPO.", whoShouldCare: "Founders aiming for a public market exit.", possibleOpportunity: "Learning post-IPO scaling dynamics." },
+  { name: "SubK", sector: "Fintech", tag: "Growth", detail: "Financial inclusion platform heavily impacting rural tech models via microfinance.", whyItMatters: "Shows successful rural financial inclusion at scale.", whoShouldCare: "Impact investors and fintech rural operators.", possibleOpportunity: "High volume data architecture for rural transactions." }
 ];
 
 export const communityEvents = [
